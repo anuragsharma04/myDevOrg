@@ -8,7 +8,7 @@ const columns = [
     { label: 'Phone', fieldName: 'Phone', type: 'phone' },
     { label: 'Industry', fieldName: '	Industry', type: 'Picklist' }
 ];
-
+//TEST GITHUB WITH GEARSET
 export default class AccountListView extends NavigationMixin(LightningElement) {
     accounts;
     check1= true;
