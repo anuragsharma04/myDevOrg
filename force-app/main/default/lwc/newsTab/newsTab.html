@@ -1,0 +1,25 @@
+<template>
+    <!-- Existing template code -->
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="selectCountry">Select Country</label>
+        <div class="slds-form-element__control">
+            <select id="selectCountry" class="slds-select" onchange={handleCountryChange}>
+                <option value="">--None--</option>
+                <option value="us">United States</option>
+                <!-- Add other countries as needed -->
+            </select>
+        </div>
+    </div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="selectCategory">Select Category</label>
+        <div class="slds-form-element__control">
+            <select id="selectCategory" class="slds-select" onchange={handleCategoryChange}>
+                <option value="">--None--</option>
+                <option value="business">Business</option>
+                <option value="technology">Technology</option>
+                <!-- Add other categories as needed -->
+            </select>
+        </div>
+    </div>
+    <!-- Existing template code -->
+</template>

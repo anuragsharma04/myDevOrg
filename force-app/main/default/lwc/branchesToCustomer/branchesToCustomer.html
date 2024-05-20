@@ -1,0 +1,22 @@
+<template>
+   <lightning-card title="Bank">
+    <template lwc:if={checkCombo}>
+    <lightning-combobox
+    name="Select Account Type"
+    label="Account Type"
+    value={value}
+    placeholder="Select Account Type"
+    options={options}
+    onchange={handleChange}>
+   </lightning-combobox>
+    </template>
+    <div slot="actions">
+        <lightning-button label="Next" onclick={handleNext}></lightning-button>
+    </div>
+    <template lwc:if={buttonSub}>
+    <lightning-record-form object-api-name="Customer__c"
+    fields={fields} columns="2" onsubmit={handlesubmit}>
+    </lightning-record-form>
+</template>
+   </lightning-card> 
+</template>

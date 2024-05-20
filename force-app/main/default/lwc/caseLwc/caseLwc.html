@@ -1,0 +1,41 @@
+<template>
+<lightning-card style = "width:60%;height:60%">
+      <lightning-layout multiple-rows>
+                <lightning-layout-item size="6" padding="around-small"></lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="search" label="Search Account" onchange={handleSearch}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+     <div class="text-success"> Case</div><br/>
+   <div class="slds-grid slds-wrap">
+  <div class="slds-col slds-size_1-of-12">
+    <span class="text-success">New</span><br/><span class="text-success2"> 8</span>
+  </div>
+  <div class="slds-col slds-size_1-of-12">
+    <span class="text-success">Working</span><br/><span class="text-success2"> 1</span>
+  </div>
+   <div class="slds-col slds-size_1-of-12">
+    <span class="text-success">Closed</span><br/><span class="text-success2"> 23</span>
+  </div>
+  </div>
+  <div class="slds-grid slds-grid_align-end">
+  <div class="slds-col">
+    <span class="text-success">New</span>
+  </div>
+  </div>
+  
+   <div class="slds-grid slds-grid_align-end">
+  <div class="slds-col">
+  <span class="text-success"> Closed</span>
+  </div>
+  </div><br/>
+    
+      <lightning-card>
+                <lightning-datatable
+                    data={data}
+                    columns={columns}
+                    key-field="Id">
+                </lightning-datatable></lightning-card>
+   
+</lightning-card>
+</template>

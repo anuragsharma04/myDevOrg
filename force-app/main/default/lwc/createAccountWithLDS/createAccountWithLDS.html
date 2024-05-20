@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Create Account Record ">
+        <lightning-layout>
+            <lightning-layout-item size="7">
+ 
+                <!-- Displaying Account fields to get information. -->
+                <lightning-input class="slds-p-around_medium" label="Name" name="accoutName"
+                    onchange={nameChangedHandler}></lightning-input>
+                <lightning-input class="slds-p-around_medium" label="Account Number" name="accoutNumber"
+                    onchange={numberChangedHandler}></lightning-input>
+                <lightning-input class="slds-p-around_medium" label="Phone" type="phone" name="accountPhone"
+                    onchange={phoneChangedHandler}></lightning-input>
+                <br/>
+                <!--Button to create Account Record-->
+                <lightning-button class="slds-m-left_x-small" label="Create Account" variant="brand"
+                    onclick={createAccountRecord}></lightning-button>
+                   
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

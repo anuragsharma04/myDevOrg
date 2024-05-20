@@ -1,0 +1,29 @@
+<template >
+    <lightning-card if:true={check1} >
+            <template if:true={check1}>
+                <lightning-datatable
+                    data={accounts}
+                    columns={columns}
+                    key-field="Id">
+                </lightning-datatable><br/>
+                          <lightning-button variant="success" label="Success" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+            </template>
+            <template if:true={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+     
+    </lightning-card>
+     <template if:true={check} for:each={cardData} for:item="result">
+      
+                        <li key={result.Id} >
+                            
+                            <lightning-card >
+                               <lightning-icon  icon-name='utility:delete' alternative-text='delete'  size='large' title='delete' onclick={handleDelete} value={result.Id}></lightning-icon>  
+                            <p class="slds-p-horizontal_small">{result.Id} <br/> {result.Name}</p>
+                 <lightning-button   data-id={result.Id} variant="success" label="Detail Page" onclick={navigate} class="slds-m-left_x-small"></lightning-button>
+              
+                            </lightning-card>
+                        </li>
+                    </template>
+    </template>

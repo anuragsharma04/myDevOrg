@@ -1,0 +1,33 @@
+<template>
+<div class="slds-theme_shade">
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <lightning-combobox
+            name="objectType"
+            onchange={handleObjectType}
+            options={objectTypeList}
+            placeholder="Object Type">
+
+            </lightning-combobox>
+        </div>
+        <div class="slds-col">
+            <lightning-combobox
+            name="objectList"
+            onchange={handleSelectedObject}
+            options={objectList}
+            placeholder="Select Object ">
+
+            </lightning-combobox>
+        </div>
+    </div>
+</div><br/>
+<div class="slds-card">
+    <lightning-checkbox-group class=" slds-card slds-m-left_small slds-p-horizontal_small"
+    name="SelectFields"
+    label="SelectFields"
+    options={fieldList}
+    value={fieldList}>
+
+    </lightning-checkbox-group>
+</div>
+</template>

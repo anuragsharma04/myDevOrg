@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Sample</label>
+    <navType>Standard</navType>
+    <tabs>Student_Enrolls__c</tabs>
+    <tabs>Instructor__c</tabs>
+    <tabs>College__c</tabs>
+    <tabs>Class__c</tabs>
+    <tabs>Seller__c</tabs>
+    <tabs>Warehouse__c</tabs>
+    <tabs>Book__c</tabs>
+    <tabs>BookInWarehouse__c</tabs>
+    <tabs>BookWithSeller__c</tabs>
+    <tabs>BookOrder__c</tabs>
+    <tabs>BookOrderLine__c</tabs>
+    <tabs>Payment__c</tabs>
+    <tabs>Branch__c</tabs>
+    <tabs>Customer__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Sample_UtilityBar</utilityBar>
+</CustomApplication>

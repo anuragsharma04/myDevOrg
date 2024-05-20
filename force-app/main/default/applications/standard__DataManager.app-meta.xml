@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Data Manager</label>
+    <navType>Standard</navType>
+    <tabs>standard-AnalyticsDataManager</tabs>
+    <tabs>Student_Enrolls__c</tabs>
+    <tabs>Seller__c</tabs>
+    <tabs>Warehouse__c</tabs>
+    <tabs>Book__c</tabs>
+    <tabs>BookInWarehouse__c</tabs>
+    <tabs>BookWithSeller__c</tabs>
+    <tabs>BookOrder__c</tabs>
+    <tabs>BookOrderLine__c</tabs>
+    <tabs>Payment__c</tabs>
+    <tabs>Branch__c</tabs>
+    <tabs>Customer__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

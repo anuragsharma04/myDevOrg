@@ -1,0 +1,54 @@
+<template>
+  <lightning-combobox
+      name="newsType"
+      label="Type of News"
+      value={selectedType}
+      options={newsTypes}
+      onchange={handleTypeChange}>
+  </lightning-combobox>
+  <lightning-combobox
+      name="country"
+      label="Select Country"
+      value={selectedCountry}
+      options={country}
+      onchange={handleCountryChange}>
+  </lightning-combobox>
+
+  <template if:true={result}>
+      <ul class="slds-list_horizontal slds-wrap">
+          <template for:each={result} for:item="news">
+              <li key={news.id} class="slds-size_1-of-3">
+                  <div class="slds-box">
+                      <div class="card">
+                          <div class="card-image">
+                              <img src={news.urlToImage} alt="News Image">
+                          </div>
+                          <div class="card-text">
+                              <h2>{news.title}</h2>
+                              <p>{news.date}</p>
+                              <p>{news.name}</p>
+                              <button class="slds-button slds-button_brand" onclick={showModal} data-item={news.id}>Read More</button>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+          </template>
+      </ul>
+  </template>
+
+  <section class={modalBackdropClass}></section>
+  <div class={modalClass} role="dialog" tabindex="-1">
+      <div class="slds-modal__container">
+          <header class="slds-modal__header">
+              <h2 class="slds-text-heading_medium">{selectedNews.title}</h2>
+              <button class="slds-button slds-button_icon slds-modal__close" title="Close" onclick={closeModal}>
+                  <lightning-icon icon-name="utility:close" size="small"></lightning-icon>
+                  <span class="slds-assistive-text">Close</span>
+              </button>
+          </header>
+          <div class="slds-modal__content slds-p-around_medium">
+              <p>{selectedNews.content}</p>
+          </div>
+      </div>
+  </div>
+</template>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <quickActions>
+        <label></label>
+        <name>Add_Contacts</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>QuickContact</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Send_Email_To_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>caseThruFlow</name>
+    </quickActions>
+</CustomObjectTranslation>

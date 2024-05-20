@@ -1,0 +1,41 @@
+<template>
+    <lightning-card class="slds-align_absolute-center" variant="card" title="Create Custom Object">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Object Label" value={objectLabel} onchange={handleObjectLabelChange}></lightning-input>
+            <lightning-input label="Object API Name" value={objectApiName} onchange={handleObjectApiNameChange}></lightning-input>
+            <lightning-input label="Plural Label" value={pluralLabel} onchange={handlePluralLabelChange}></lightning-input>
+            <lightning-button class="button" variant="brand" label="Create Object" onclick={handleCreateObject}></lightning-button>
+        </div>
+        <template if:true={showFields}>
+            <div class="slds-p-around_medium">
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                    <thead>
+                        <tr>
+                            <th>Field API Name</th>
+                            <th>Field Label</th>
+                            <th>Field Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={fieldRows} for:item="fieldRow" for:index="index">
+                            <tr key={fieldRow.key}>
+                                <td>
+                                    <lightning-input value={fieldRow.fieldApiName} onchange={handleFieldInputChange} data-index={index} data-field="fieldApiName"></lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-input value={fieldRow.fieldLabel} onchange={handleFieldInputChange} data-index={index} data-field="fieldLabel"></lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-input value={fieldRow.fieldDescription} onchange={handleFieldInputChange} data-index={index} data-field="fieldDescription"></lightning-input>
+                                </td>
+                            </tr>
+                        </template>
+                        
+                    </tbody>
+                </table>
+                <lightning-button class="button" variant="brand" label="Add Field" onclick={handleAddField}></lightning-button>
+                <lightning-button class="button" variant="brand" label="Create Field" onclick={handleCreateField}></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

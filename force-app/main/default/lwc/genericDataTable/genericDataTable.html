@@ -1,0 +1,14 @@
+<!-- genericDataTable.html -->
+<template>
+    <lightning-card title={title} icon-name="standard:account">
+     
+        <template if:true={filteredData}>
+            <lightning-datatable
+                key-field="Id"
+                data={filteredData}
+                columns={columns}
+            >
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

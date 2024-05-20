@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactsLookup__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Lookup</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Contacts Accounts History</relationshipLabel>
+    <relationshipName>Contacts_Accounts_History</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

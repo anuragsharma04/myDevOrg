@@ -1,0 +1,12 @@
+<!-- dynamicDataTable.html -->
+<template>
+    <lightning-card title="Dynamic Data Table">
+        <lightning-input label="Parent Object Name" value={parentObjectName} onchange={handleParentObjectNameChange}></lightning-input>
+        <lightning-input label="Child Object Name" value={childObjectName} onchange={handleChildObjectNameChange}></lightning-input>
+        <lightning-input label="Field Names (comma separated)" value={fieldNames} onchange={handleFieldNamesChange}></lightning-input>
+        
+        <template if:true={data}>
+            <lightning-datatable key-field="Id" data={data} columns={columns} hide-checkbox-column="true"></lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

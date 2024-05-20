@@ -1,0 +1,143 @@
+<apex:page standardController="Book__c" extensions="SalarySlipController"  renderAs="pdf" >
+ <!--<apex:image value="{!$Resource.vfImage}" width="200" height="200"/>-->
+   <div style="margin-bottom: 10px;">
+        <img src="{!$Resource.vfImage}" width="130" height="130" style="float: left; margin-right: 10px;"/>
+        <div style="float: right;">
+            <h2>AnavClouds Software Solutions Private Limited</h2>
+            <p>
+                119, Himmat Nagar Bhaskar Flyover, Tonk Fatak Rd,<br/>
+                Gopalpura Mode, Jaipur, Rajasthan 302018
+            </p>
+        </div>
+        <div style="clear: both;"></div>
+    </div>   
+    <apex:pageBlock >
+        <table style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td colspan="4" style="border: 1px solid black; text-align: center;">Pay Slip for January 2024</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Employee No.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!empNo}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Working Days</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!workingDays}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Name</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!name}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Leave Taken</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!LeaveTaken}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Designation</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!desgination}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">LWP</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!lwp}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Location</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!location}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Leave Balance</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!lb}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Bank Name</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!bankname}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Days Present</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!dayspresent}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Bank A/C No.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!bankaccnum}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Effective Days</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!effectivedays}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Pan No.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!panNum}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">P.F.no.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!pfNum}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">E.S.I.no.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+       <tr>
+            <td  colspan="4" style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+           
+            </tr>    
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">EARNINGS</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Amount</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">DEDUCTIONS</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Amount</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Basic</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">E.S.I</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">HRA</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">P.F.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Special allowance</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Loan</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Conveyance allowance</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Other</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Medical allowance</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">T.D.S.</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Performance incentive</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Leave deduction</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">OverTime</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Advance</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Gross pay</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!basicAmount}</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">Total Deduction</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: left;">{!esiNum}</td>
+            </tr>
+           <tr>
+            <td  colspan="4" style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+           
+            </tr>
+             <tr>
+            <td  colspan="3" style="border: 1px solid black; padding: 8px; text-align: right;">Gross Pay</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+            </tr>
+            <tr>
+            <td  colspan="3" style="border: 1px solid black; padding: 8px; text-align: right;">Deduction Salary</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+            </tr>
+            <tr>
+             <td  colspan="3" style="border: 1px solid black; padding: 4px; text-align: right;">Net Payable Amount:{!basicSal}</td>
+            <td style="border: 1px solid black; padding: 8px; text-align: left;">&nbsp;</td>
+            </tr>
+        </table>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,12 @@
+lightning-button.button {
+	--sds-c-button-brand-color-background: #8d0808;
+    --sds-c-button-text-color: #ede5e5;
+}
+table  th{
+    background: #5d5858;
+    color: white;
+  border: 1px solid black
+    }
+  lightning-card.card{
+    --slds-c-card-color-border: rgb(224, 219, 219);
+  }

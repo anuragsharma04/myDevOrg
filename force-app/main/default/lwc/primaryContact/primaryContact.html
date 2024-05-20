@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="create a contact">
+    <lightning-input label="First Name" onchange={handleFirstNameChange}></lightning-input>
+    <lightning-input label="Last Name" onchange={handleLastNameChange}></lightning-input>
+    <lightning-input type="checkbox" label="Is Primary" onchange={handleCheckboxChange}></lightning-input>
+    <lightning-button label="Save" onclick={handleSave}></lightning-button>
+</lightning-card>
+</template>
